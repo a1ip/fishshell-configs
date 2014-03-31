@@ -1,3 +1,3 @@
 function time
-    command grca time $argv
+    grca time $argv
 end

@@ -1,3 +1,3 @@
 function r
-    command grca rails $argv
+    grca rails $argv
 end

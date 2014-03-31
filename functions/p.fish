@@ -1,3 +1,3 @@
 function p
-    command grca puma $argv
+    grca puma $argv
 end

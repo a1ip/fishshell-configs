@@ -1,3 +1,3 @@
 function df
-    command grca df -h $argv
+    grca df -h $argv
 end

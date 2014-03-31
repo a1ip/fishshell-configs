@@ -1,3 +1,3 @@
 function lsmod
-    command grca lsmod $argv
+    grca lsmod $argv
 end

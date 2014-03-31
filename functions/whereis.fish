@@ -1,3 +1,3 @@
 function whereis
-    command grca whereis $argv
+    grca whereis $argv
 end

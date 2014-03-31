@@ -1,3 +1,3 @@
 function u
-    command grca unicorn $argv
+    grca unicorn $argv
 end

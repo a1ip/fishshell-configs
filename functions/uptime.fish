@@ -1,3 +1,3 @@
 function uptime
-    command grca uptime $argv
+    grca uptime $argv
 end
