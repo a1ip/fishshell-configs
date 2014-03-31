@@ -1,3 +1,3 @@
 function ps
-    grca ps $argv
+    command grca ps $argv
 end

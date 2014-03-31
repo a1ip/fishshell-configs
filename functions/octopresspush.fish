@@ -1,3 +1,3 @@
 function octopresspush --description 'Push and deploy octopress'
-  rake generate;rake deploy;git push origin source
+  command rake generate;rake deploy;git push origin source
 end

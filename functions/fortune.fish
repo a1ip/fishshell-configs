@@ -1,3 +1,3 @@
 function fortune
-    grca fortune $argv
+    command grca fortune $argv
 end

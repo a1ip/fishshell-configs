@@ -1,3 +1,3 @@
 function grep
-    grca grep $argv
+    command grca grep $argv
 end

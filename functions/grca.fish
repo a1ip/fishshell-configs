@@ -1,3 +1,3 @@
 function grca
-    grc --colour=on $argv
+    command grc --colour=on $argv
 end

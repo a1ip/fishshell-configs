@@ -1,3 +1,3 @@
 function route
-    grca route $argv
+    command grca route $argv
 end

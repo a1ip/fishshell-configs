@@ -1,3 +1,3 @@
 function ping
-    grca ping $argv
+    command grca ping $argv
 end

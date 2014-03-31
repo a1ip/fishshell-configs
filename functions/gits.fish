@@ -1,3 +1,3 @@
 function gits --description 'git status'
-  git status
+  command git status
 end

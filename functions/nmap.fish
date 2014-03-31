@@ -1,4 +1,4 @@
 function nmap
-    grca nmap $argv
+    command grca nmap $argv
 end
 

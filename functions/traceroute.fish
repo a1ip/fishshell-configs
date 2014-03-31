@@ -1,3 +1,3 @@
 function traceroute
-    grca traceroute $argv
+    command grca traceroute $argv
 end

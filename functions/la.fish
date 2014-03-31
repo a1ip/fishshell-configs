@@ -1,3 +1,3 @@
 function la
-    grca ls -A $argv
+    command grca ls -A $argv
 end

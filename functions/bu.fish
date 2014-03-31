@@ -1,3 +1,3 @@
 function bu
-    grca bundle exec unicorn $argv
+    command grca bundle exec unicorn $argv
 end
