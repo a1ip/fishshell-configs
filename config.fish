@@ -50,16 +50,17 @@ function logh
     grca head $argv
 end
 
-set -x PATH ~/.rvm/gems/ruby-2.1.1/bin ~/.rvm/gems/ruby-2.1.1@global/bin ~/.rvm/rubies/ruby-2.1.1/bin ~/.rvm/bin /usr/local/share/npm/bin /usr/local/bin /usr/local/sbin /usr/local/heroku/bin /usr/X11/bin /usr/bin /bin /usr/sbin /sbin /usr/local/Cellar/fishfish/OpenBeta_r2/bin /usr/X11R6/bin
+set -x PATH ~/.rvm/gems/ruby-2.1.1@octopress/bin ~/.rvm/gems/ruby-2.1.1/bin ~/.rvm/gems/ruby-2.1.1@global/bin ~/.rvm/rubies/ruby-2.1.1/bin ~/.rvm/bin /usr/local/bin /usr/local/sbin /usr/X11/bin /usr/bin /bin /usr/sbin /sbin /usr/X11R6/bin
 
-# ~/.rvm/gems/ruby-2.1.1@octopress/bin
+# additional PATHs for ubuntu: /usr/local/heroku/bin /usr/local/share/npm/bin 
+
 # /usr/local/mysql/bin # wrong path
 
 # editor
 set -x EDITOR "mvim"
 
 # global node modules
-set -x NODE_PATH "/usr/local/lib/node_modules"
+# set -x NODE_PATH "/usr/local/lib/node_modules"
 
 # grep colors
 setenv -x GREP_OPTIONS "--color=auto"
@@ -80,11 +81,11 @@ fortune bible | cowsay -nf tux
 # export PATH="/usr/local/heroku/bin:$PATH"
 
 set -l GITHUB https://raw.github.com/lunks/fish-nuggets/master/functions;
-curl --create-dirs -o ~/.config/fish/functions/rvm.fish $GITHUB/rvm.fish;
+curl -s --create-dirs -o ~/.config/fish/functions/rvm.fish $GITHUB/rvm.fish;
 # curl -o ~/.config/fish/functions/cd.fish $GITHUB/cd.fish;
 rvm > null;
 
-rvm use 2.1.1@octopress
+# rvm use ruby-2.1.1@octopress
 
 
 test -s $HOME/.nvm-fish/nvm.fish; and source $HOME/.nvm-fish/nvm.fish

@@ -1,3 +1,3 @@
 function fish
-    fish --login $argv
+    command fish --login $argv
 end
