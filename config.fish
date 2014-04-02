@@ -1,54 +1,3 @@
-function vmstat
-    grca vmstat $argv
-end
-
-function iostat
-    grca iostat $argv
-end
-
-function mount
-    grca mount $argv
-end
-
-function cvs
-    grca cvs $argv
-end
-
-function uname
-    grca uname $argv
-end
-
-function ccal
-    grca cal $argv
-end
-
-function diff
-    grca diff $argv
-end
-
-function last
-    grca last $argv
-end
-
-function netstat
-    grca netstat $argv
-end
-
-function make
-    grca make $argv
-end
-
-function logc
-    grca cat $argv
-end
-
-function logt
-    grca tail $argv
-end
-
-function logh
-    grca head $argv
-end
 
 set -x PATH ~/.rvm/gems/ruby-2.1.1@octopress/bin ~/.rvm/gems/ruby-2.1.1/bin ~/.rvm/gems/ruby-2.1.1@global/bin ~/.rvm/rubies/ruby-2.1.1/bin ~/.rvm/bin /usr/local/bin /usr/local/sbin /usr/X11/bin /usr/bin /bin /usr/sbin /sbin /usr/X11R6/bin
 
@@ -75,7 +24,8 @@ set -x RUBY_GC_MALLOC_LIMIT 1000000000
 set -x RUBY_HEAP_FREE_MIN 500000
 
 # /usr/local/bin/fortune
-fortune bible | cowsay -nf tux
+# fortune bible | cowsay -nf tux
+fortune bible
 
 ### Added by the Heroku Toolbelt
 # export PATH="/usr/local/heroku/bin:$PATH"
