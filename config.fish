@@ -27,6 +27,8 @@ set -x RUBY_HEAP_FREE_MIN 500000
 # fortune bible | cowsay -nf tux
 fortune bible
 
+set -g PLANCHRONO https://gist.githubusercontent.com/a1ip/9979931/raw/9a0126e89bf1d7e7cce8f4904476e7e9fc986cd7/plan_chronological.txt;
+
 ### Added by the Heroku Toolbelt
 # export PATH="/usr/local/heroku/bin:$PATH"
 
