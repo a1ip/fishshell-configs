@@ -4,6 +4,6 @@ function todaybible --description 'Shows verses to read by cronological plan'
 	else if test (count $argv) -eq 1
 		command ruby -e "puts ARGF.read.split(/\n\n\n/)[$argv[1].to_i]" < ~/.planchrono.txt
 	else
-		command ruby -e "puts /\n$argv[1]\s{3}(.*)\n/.match(ARGF.read.split(/\n\n\n/)[$argv[2].to_i])[1].sub(/;\s+/,'; ')" < ~/.planchrono.txt
+		command ruby -e "puts /\n$argv[2]\s{3}(.*)\n/.match(ARGF.read.split(/\n\n\n/)[$argv[1].to_i])[1].sub(/;\s+/,'; ')" < ~/.planchrono.txt
 	end
 end
