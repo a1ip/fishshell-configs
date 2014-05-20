@@ -1,5 +1,5 @@
 
-set -x PATH ~/.rvm/gems/ruby-2.1.1@octopress/bin ~/.rvm/gems/ruby-2.1.1/bin ~/.rvm/gems/ruby-2.1.1@global/bin ~/.rvm/rubies/ruby-2.1.1/bin ~/.rvm/bin /usr/local/bin /usr/local/sbin /usr/X11/bin /usr/bin /bin /usr/sbin /sbin /usr/X11R6/bin
+set -x PATH ~/.rvm/gems/ruby-2.1.2@octopress/bin ~/.rvm/gems/ruby-2.1.2/bin ~/.rvm/gems/ruby-2.1.2@global/bin ~/.rvm/rubies/ruby-2.1.2/bin ~/.rvm/bin /usr/local/bin /usr/local/sbin /usr/X11/bin /usr/bin /bin /usr/sbin /sbin /usr/X11R6/bin
 
 # additional PATHs for ubuntu: /usr/local/heroku/bin /usr/local/share/npm/bin 
 
