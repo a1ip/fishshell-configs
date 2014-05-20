@@ -23,10 +23,6 @@ set -x RUBY_HEAP_SLOTS_GROWTH_FACTOR 1
 set -x RUBY_GC_MALLOC_LIMIT 1000000000
 set -x RUBY_HEAP_FREE_MIN 500000
 
-# /usr/local/bin/fortune
-# fortune bible | cowsay -nf tux
-fortune bible
-
 set -g PLANCHRONO https://gist.githubusercontent.com/a1ip/9979931/raw/9a0126e89bf1d7e7cce8f4904476e7e9fc986cd7/plan_chronological.txt;
 
 ### Added by the Heroku Toolbelt
@@ -38,6 +34,10 @@ curl -s --create-dirs -o ~/.config/fish/functions/rvm.fish $GITHUB/rvm.fish;
 rvm > null;
 
 # rvm use ruby-2.1.1@octopress
-
+rvm use 2.1
 
 test -s $HOME/.nvm-fish/nvm.fish; and source $HOME/.nvm-fish/nvm.fish
+
+# /usr/local/bin/fortune
+# fortune bible | cowsay -nf tux
+fortune bible
