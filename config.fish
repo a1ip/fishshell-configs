@@ -33,7 +33,7 @@ set -g PLANCHRONO https://gist.githubusercontent.com/a1ip/9979931/raw/9a0126e89b
 
 # rvm use ruby-2.1.1@octopress
 rvm use 2.1
-
+rvm gemset use octopress
 test -s $HOME/.nvm-fish/nvm.fish; and source $HOME/.nvm-fish/nvm.fish
 
 # /usr/local/bin/fortune
