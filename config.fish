@@ -28,10 +28,8 @@ set -g PLANCHRONO https://gist.githubusercontent.com/a1ip/9979931/raw/9a0126e89b
 ### Added by the Heroku Toolbelt
 # export PATH="/usr/local/heroku/bin:$PATH"
 
-set -l GITHUB https://raw.github.com/lunks/fish-nuggets/master/functions;
-curl -s --create-dirs -o ~/.config/fish/functions/rvm.fish $GITHUB/rvm.fish;
-# curl -o ~/.config/fish/functions/cd.fish $GITHUB/cd.fish;
-rvm > null;
+# set -l GITHUB https://raw.github.com/lunks/fish-nuggets/master/functions;
+# curl -s --create-dirs -o ~/.config/fish/functions/rvm.fish $GITHUB/rvm.fish;
 
 # rvm use ruby-2.1.1@octopress
 rvm use 2.1
