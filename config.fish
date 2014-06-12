@@ -25,6 +25,13 @@ set -x RUBY_HEAP_FREE_MIN 500000
 
 set -g PLANCHRONO https://gist.githubusercontent.com/a1ip/9979931/raw/9a0126e89bf1d7e7cce8f4904476e7e9fc986cd7/plan_chronological.txt;
 
+#set fish_function_path $fish_function_path "~/.vim/bundle/powerline/powerline/bindings/fish"
+#powerline-setup
+
+function fish_prompt
+	~/powerline-shell.py $status --shell bare ^/dev/null
+end
+
 ### Added by the Heroku Toolbelt
 # export PATH="/usr/local/heroku/bin:$PATH"
 
@@ -32,10 +39,11 @@ set -g PLANCHRONO https://gist.githubusercontent.com/a1ip/9979931/raw/9a0126e89b
 # curl -s --create-dirs -o ~/.config/fish/functions/rvm.fish $GITHUB/rvm.fish;
 
 # rvm use ruby-2.1.1@octopress
-rvm use 2.1
-rvm gemset use octopress
+rvm use 2.1 > /dev/null
+rvm gemset use octopress > /dev/null
 test -s $HOME/.nvm-fish/nvm.fish; and source $HOME/.nvm-fish/nvm.fish
 
 # /usr/local/bin/fortune
 # fortune bible | cowsay -nf tux
 fortune bible
+ta
