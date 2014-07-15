@@ -1,5 +1,4 @@
-
-set -x PATH ~/.rvm/gems/ruby-2.1.2@octopress/bin ~/.rvm/gems/ruby-2.1.2/bin ~/.rvm/gems/ruby-2.1.2@global/bin ~/.rvm/rubies/ruby-2.1.2/bin ~/.rvm/bin ~/.cabal/bin /usr/local/bin /usr/local/sbin /usr/X11/bin /usr/bin /bin /usr/sbin /sbin /usr/X11R6/bin
+set -g -x PATH /usr/local/Racket ~/.cabal/bin /usr/local/bin /usr/local/sbin /usr/X11/bin /usr/bin /bin /usr/sbin /sbin /usr/X11R6/bin /usr/texbin ~/.bin ~/bin
 
 # additional PATHs for ubuntu: /usr/local/heroku/bin /usr/local/share/npm/bin 
 
@@ -38,12 +37,17 @@ end
 # set -l GITHUB https://raw.github.com/lunks/fish-nuggets/master/functions;
 # curl -s --create-dirs -o ~/.config/fish/functions/rvm.fish $GITHUB/rvm.fish;
 
-# rvm use ruby-2.1.1@octopress
-rvm use 2.1 > /dev/null
-rvm gemset use octopress > /dev/null
 test -s $HOME/.nvm-fish/nvm.fish; and source $HOME/.nvm-fish/nvm.fish
 
+# set -g -x PATH ~/.rvm/gems/ruby-2.1.2@global/bin ~/.rvm/gems/ruby-2.1.2/bin ~/.rvm/gems/ruby-2.1.2@octopress/bin ~/.rvm/rubies/ruby-2.1.2/bin ~/.rvm/bin $PATH
+rvm use default > /dev/null
+# rvm use ruby-2.1.1@octopress
+# rvm use 2.1 > /dev/null
+#rvm gemset use octopress > /dev/null
+# rvm gemset use global > /dev/null
+
+ulimit -S -n 100000 > /dev/null
 # /usr/local/bin/fortune
 # fortune bible | cowsay -nf tux
 fortune bible
-ta
+#ta
