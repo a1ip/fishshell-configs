@@ -1,3 +1,3 @@
 function ifconfig
-    grca ifconfig $argv
+    command ifconfig $argv #grca ifconfig $argv
 end

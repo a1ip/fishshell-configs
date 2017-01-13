@@ -1,6 +1,16 @@
-set -g -x PATH /usr/local/Racket ~/.cabal/bin /usr/local/bin /usr/local/sbin /usr/X11/bin /usr/bin /bin /usr/sbin /sbin /usr/X11R6/bin /usr/texbin ~/.bin ~/bin
+set -gx PATH ./.cabal-sandbox/bin ~/Library/Haskell/bin /usr/local/bin /usr/local/sbin /usr/X11/bin /usr/bin /bin /usr/sbin /sbin /usr/X11R6/bin /Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin ~/.bin ~/bin /Library/Frameworks/Python.framework/Versions/2.7/bin/
+# set -gx PATH ./.cabal-sandbox/bin /usr/local/Racket ~/Library/Haskell/bin ~/.cabal/bin /usr/local/bin /usr/local/sbin /usr/X11/bin /usr/bin /bin /usr/sbin /sbin /usr/X11R6/bin /Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin ~/.bin ~/bin ~/Library/Android/sdk /Library/Frameworks/Python.framework/Versions/2.7/bin/ /opt/homebrew-cask/Caskroom/libreoffice/5.0.0/LibreOffice.app/Contents/MacOS/
 
-# additional PATHs for ubuntu: /usr/local/heroku/bin /usr/local/share/npm/bin 
+# /usr/texbin
+
+# set Docker env
+
+set -x DOCKER_HOST tcp://192.168.59.103:2376
+set -x DOCKER_CERT_PATH /Users/phil/.boot2docker/certs/boot2docker-vm
+set -x DOCKER_TLS_VERIFY 1
+eval (docker-machine env default)
+
+# additional PATHs for ubuntu: /usr/local/heroku/bin /usr/local/share/npm/bin
 
 # /usr/local/mysql/bin # wrong path
 
@@ -34,13 +44,18 @@ end
 ### Added by the Heroku Toolbelt
 # export PATH="/usr/local/heroku/bin:$PATH"
 
-# set -l GITHUB https://raw.github.com/lunks/fish-nuggets/master/functions;
-# curl -s --create-dirs -o ~/.config/fish/functions/rvm.fish $GITHUB/rvm.fish;
+# set -l GITHUB
 
-test -s $HOME/.nvm-fish/nvm.fish; and source $HOME/.nvm-fish/nvm.fish
+source ~/.config/fish/nvm-wrapper/nvm.fish
+
+# Load the default rubies
+#
+#if test -z $rvm_bin_path
+#  exec bash --login -c "exec fish"
+#end
 
 # set -g -x PATH ~/.rvm/gems/ruby-2.1.2@global/bin ~/.rvm/gems/ruby-2.1.2/bin ~/.rvm/gems/ruby-2.1.2@octopress/bin ~/.rvm/rubies/ruby-2.1.2/bin ~/.rvm/bin $PATH
-rvm use default > /dev/null
+# rvm use default > /dev/null
 # rvm use ruby-2.1.1@octopress
 # rvm use 2.1 > /dev/null
 #rvm gemset use octopress > /dev/null
@@ -49,5 +64,18 @@ rvm use default > /dev/null
 ulimit -S -n 100000 > /dev/null
 # /usr/local/bin/fortune
 # fortune bible | cowsay -nf tux
-fortune bible
+#fortune bible
 #ta
+
+set -gx WINEARCH "win32"
+
+set -gx HOMEBREW_CASK_OPTS --caskroom=/opt/homebrew-cask/Caskroom
+
+#pyenv init -
+
+#set -gx SAGE_ROOT "/opt/homebrew-cask/Caskroom/sage/6.9/Sage-6.9.app/Contents/Resources/sage"
+#set -gx SAGE64 "yes"
+#hostname Air.local
+fortune myown
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
