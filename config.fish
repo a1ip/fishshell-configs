@@ -1,4 +1,5 @@
-set -gx PATH ./.cabal-sandbox/bin ~/Library/Haskell/bin /usr/local/bin /usr/local/sbin /usr/X11/bin /usr/bin /bin /usr/sbin /sbin /usr/X11R6/bin /Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin ~/.bin ~/bin /Library/Frameworks/Python.framework/Versions/2.7/bin/
+set -gx PATH ./.cabal-sandbox/bin ~/Library/Haskell/bin /usr/local/bin /usr/local/sbin /usr/X11/bin /usr/bin /bin /usr/sbin /sbin /usr/X11R6/bin /Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin ~/.bin ~/bin
+# /Library/Frameworks/Python.framework/Versions/2.7/bin/
 # set -gx PATH ./.cabal-sandbox/bin /usr/local/Racket ~/Library/Haskell/bin ~/.cabal/bin /usr/local/bin /usr/local/sbin /usr/X11/bin /usr/bin /bin /usr/sbin /sbin /usr/X11R6/bin /Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin ~/.bin ~/bin ~/Library/Android/sdk /Library/Frameworks/Python.framework/Versions/2.7/bin/ /opt/homebrew-cask/Caskroom/libreoffice/5.0.0/LibreOffice.app/Contents/MacOS/
 
 # /usr/texbin
