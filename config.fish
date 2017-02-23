@@ -77,6 +77,8 @@ set -gx HOMEBREW_CASK_OPTS --caskroom=/opt/homebrew-cask/Caskroom
 #set -gx SAGE_ROOT "/opt/homebrew-cask/Caskroom/sage/6.9/Sage-6.9.app/Contents/Resources/sage"
 #set -gx SAGE64 "yes"
 #hostname Air.local
+#logo
+fish_greeting
 fortune myown
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
