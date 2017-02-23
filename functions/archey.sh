@@ -148,20 +148,37 @@ if [ -a "$logofile" ]
 else
 # The ${foo#  } is a cheat so that it lines up here as well
 # as when run.
+#   echo -e "
+# ${GREEN#  }          #######                      ${fieldlist[0]}
+# ${GREEN#  }          ########                     ${fieldlist[1]}
+# ${GREEN#  }              #####                    ${fieldlist[2]}
+# ${GREEN#  }               #####                   ${fieldlist[3]}
+# ${YELLOW# }               ######                  ${fieldlist[4]}
+# ${YELLOW# }              ########                 ${fieldlist[5]}
+# ${RED#    }            ###########                ${fieldlist[6]}
+# ${RED#    }           #####   #####               ${fieldlist[7]}
+# ${RED#    }          #####     #####              ${fieldlist[8]}
+# ${PURPLE# }        #####        #####             ${fieldlist[9]}
+# ${PURPLE# }       #####          #####   ##       ${fieldlist[10]}
+# ${BLUE#   }     #####             ##########      ${fieldlist[11]}
+# ${BLUE#   }    #####               #######        ${fieldlist[12]}
+# ${normal}
+# "
+# fi
   echo -e "
-${GREEN#  }          #######                      ${fieldlist[0]}
-${GREEN#  }          ########                     ${fieldlist[1]}
-${GREEN#  }              #####                    ${fieldlist[2]}
-${GREEN#  }               #####                   ${fieldlist[3]}
-${YELLOW# }               ######                  ${fieldlist[4]}
-${YELLOW# }              ########                 ${fieldlist[5]}
-${RED#    }            ###########                ${fieldlist[6]}
-${RED#    }           #####   #####               ${fieldlist[7]}
-${RED#    }          #####     #####              ${fieldlist[8]}
-${PURPLE# }        #####        #####             ${fieldlist[9]}
-${PURPLE# }       #####          #####   ##       ${fieldlist[10]}
-${BLUE#   }     #####             ##########      ${fieldlist[11]}
-${BLUE#   }    #####               #######        ${fieldlist[12]}
+                ${fieldlist[0]}
+   /\    /\\     ${fieldlist[1]}
+   \ \  / /     ${fieldlist[2]}
+    \ \/ /~~.   ${fieldlist[3]}
+     \  //_/    ${fieldlist[4]}
+     /  \/      ${fieldlist[5]}
+    / /\ \\      ${fieldlist[6]}
+   / /| \/      ${fieldlist[7]}
+  / / --/       ${fieldlist[8]}
+ / / /  |       ${fieldlist[9]}
+/ / /   |       ${fieldlist[10]}
+\/  \   \_      ${fieldlist[11]}
+-------------   ${fieldlist[12]}
 ${normal}
 "
 fi
