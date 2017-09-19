@@ -1,3 +1,3 @@
 function gits --description 'git status'
-  command git status
+  git status $argv
 end
