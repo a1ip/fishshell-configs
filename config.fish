@@ -1,5 +1,8 @@
 set -gx PATH /usr/local/opt/python/libexec/bin ./.cabal-sandbox/bin ~/Library/Haskell/bin /usr/local/bin /usr/local/sbin /usr/X11/bin /usr/bin /bin /usr/sbin /sbin /usr/X11R6/bin /Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin ~/.bin ~/bin
 
+set -g YX ~/Documents/Яндекс.Диск
+set -g FC ~/.config/fish
+
 # set Docker env
 
 set -x DOCKER_HOST tcp://192.168.59.103:2376

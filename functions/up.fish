@@ -2,7 +2,6 @@ function up --description 'Upgrade brew and node packages'
   brew update
   brew upgrade
   brew cleanup
-  brew cask cleanup
   brew linkapps
   brew cu --yes --cleanup --all --quiet
   #rvm get stable
