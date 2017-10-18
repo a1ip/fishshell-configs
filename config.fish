@@ -1,4 +1,4 @@
-set -gx PATH /usr/local/opt/python/libexec/bin ./.cabal-sandbox/bin ~/Library/Haskell/bin /usr/local/bin /usr/local/sbin /usr/X11/bin /usr/bin /bin /usr/sbin /sbin /usr/X11R6/bin /Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin ~/.bin ~/bin
+set -gx PATH /usr/local/opt/python/libexec/bin ./.cabal-sandbox/bin ~/Library/Haskell/bin /usr/local/bin /usr/local/sbin /usr/X11/bin /usr/bin /bin /usr/sbin /sbin /Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin ~/.bin ~/bin
 
 set -g YX ~/Documents/Яндекс.Диск
 set -g FC ~/.config/fish
@@ -8,8 +8,8 @@ set -g FC ~/.config/fish
 set -x DOCKER_HOST tcp://192.168.59.103:2376
 set -x DOCKER_CERT_PATH /Users/phil/.boot2docker/certs/boot2docker-vm
 set -x DOCKER_TLS_VERIFY 1
-#eval (docker-machine restart default)
 eval (docker-machine env default)
+#docker-machine restart default
 
 # editor
 set -x EDITOR "nvim"
@@ -55,5 +55,9 @@ set -gx WINEARCH "win32"
 
 #set -gx SAGE_ROOT "/opt/homebrew-cask/Caskroom/sage/6.9/Sage-6.9.app/Contents/Resources/sage"
 #set -gx SAGE64 "yes"
+
+set -gx GOROOT (go env GOROOT)
+set -gx GOPATH ~/go
+set -gx PATH $PATH $GOPATH/bin
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
