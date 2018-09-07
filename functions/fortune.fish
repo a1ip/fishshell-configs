@@ -1,3 +1,3 @@
-function fortune
-    grca fortune $argv
+function fortune --description 'Colorized Fortune Cookie'
+    grc fortune $argv
 end

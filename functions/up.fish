@@ -1,9 +1,12 @@
 function up --description 'Upgrade brew and node packages'
   brew update
   brew upgrade
-  brew cleanup
-  brew linkapps
-  brew cu --yes --cleanup --all --quiet
+  #brew cleanup
+  #brew linkapps
+  #brew cask upgrade
+  brew cu --yes --all --quiet
+  #brew cleanup
+  rm -rf (brew --cache)
   #rvm get stable
   omf update
   npm install -g npm@latest

@@ -1,7 +1,7 @@
 function wn --description 'погода в Новороссийске'
   if count $argv > /dev/null
-    curl wttr.in/44.72,37.76\?lang=ru\&$argv
+    curl ru.wttr.in/44.72,37.76\?$argv
   else
-    curl wttr.in/44.72,37.76\?lang=ru\&TQ0
+    curl ru.wttr.in/44.72,37.76\?TQ0
   end
 end
