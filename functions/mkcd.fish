@@ -1,4 +1,4 @@
-function mkcd --description 'Make a new folder and cd into it'
+function mkcd -d 'Make a new folder and cd into it'
     if [ $argv[1] ]
         mkdir -p $argv[1];cd $argv[1]
     else

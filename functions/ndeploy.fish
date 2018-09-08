@@ -1,3 +1,3 @@
-function ndeploy --description 'npm run deploy task'
+function ndeploy -d 'npm run deploy task'
   npm run deploy
 end

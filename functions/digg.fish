@@ -1,4 +1,4 @@
-function digg --description 'dig from Google DNS'
+function digg -d 'dig from Google DNS'
     if [ $argv[1] ]
         dig @8.8.8.8 $argv
     else

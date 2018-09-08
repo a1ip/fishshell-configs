@@ -1,3 +1,3 @@
-function nserve --description 'npm run serve task'
+function nserve -d 'npm run serve task'
   npm run serve
 end

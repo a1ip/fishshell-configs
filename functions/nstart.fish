@@ -1,3 +1,3 @@
-function nstart --description 'npm run start task'
+function nstart -d 'npm run start task'
   npm run start
 end

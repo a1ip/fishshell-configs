@@ -1,4 +1,4 @@
-function dns --description 'List DNS for NETWORK_SERVICE'
+function dns -d 'List DNS for NETWORK_SERVICE'
     if [ $argv[1] ]
         networksetup -getdnsservers $argv
     else

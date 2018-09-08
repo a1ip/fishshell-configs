@@ -1,4 +1,4 @@
-function m --description 'Open MacVim'
+function m -d 'Open MacVim'
   if not count $argv >/dev/null
     mvim .; and return 0
   end

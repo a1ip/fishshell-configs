@@ -1,4 +1,4 @@
-function wttr --description 'weather'
+function wttr -d 'weather'
   if count $argv > /dev/null
     curl wttr.in/$argv
   else

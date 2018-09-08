@@ -1,3 +1,3 @@
-function vi --description 'Run neo vim'
+function vi -d 'Run neo vim'
 	command nvim $argv
 end

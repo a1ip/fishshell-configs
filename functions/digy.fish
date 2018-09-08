@@ -1,4 +1,4 @@
-function digy --description 'dig from Yandex DNS'
+function digy -d 'dig from Yandex DNS'
     if [ $argv[1] ]
         dig @77.88.8.8 $argv
     else

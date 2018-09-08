@@ -1,4 +1,4 @@
-function up --description 'Upgrade brew and node packages'
+function up -d 'Upgrade brew and node packages'
   brew update
   brew upgrade
   #brew cleanup

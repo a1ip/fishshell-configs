@@ -1,4 +1,4 @@
-function gitio --description 'GitHub url shortener'
+function gitio -d 'GitHub url shortener'
   switch (count $argv)
     case 0
       echo "Please use format: > gitio url_to_github [code]"

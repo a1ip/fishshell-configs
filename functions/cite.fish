@@ -1,3 +1,3 @@
-function cite --description 'Fortune Cookie from my own collection'
-    fortune $FORTUNES/ru/a1ip $argv
+function cite -d 'Fortune Cookie from my own collection'
+    fortune a1ip $argv
 end

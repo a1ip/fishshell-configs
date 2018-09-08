@@ -1,3 +1,3 @@
-function canaryh --description 'Run headless Google Chrome Canary'
+function canaryh -d 'Run headless Google Chrome Canary'
   /Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --headless --disable-gpu $argv
 end

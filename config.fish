@@ -5,6 +5,9 @@ set -gx MANPATH /usr/share/man /usr/local/man /usr/local/Homebrew/manpages /usr/
 set -g YX ~/Documents/Яндекс.Диск
 set -g FC ~/.config/fish
 set -g DL ~/Downloads
+set -gx RU /usr/local/share/games/fortunes/ru
+
+set -gx BAT_THEME "Monokai Extended Light"
 
 setenv LANG "ru_RU.UTF-8"
 setenv LC_ALL "ru_RU.UTF-8"
@@ -69,6 +72,5 @@ set -gx GOROOT (go env GOROOT)
 set -gx GOPATH ~/go
 set -gx PATH $PATH $GOPATH/bin
 
-set -gx FORTUNES /usr/local/share/games/fortunes
 source /usr/local/etc/grc.fish > /dev/null 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
