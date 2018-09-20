@@ -1,4 +1,0 @@
-fishshell-configs
-=================
-
-fishshell configs

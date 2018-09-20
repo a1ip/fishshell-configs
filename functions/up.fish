@@ -15,4 +15,6 @@ function up -d 'Upgrade brew and node packages'
   #meteor update
   #rvm use default
   #gem update -q
+  echo 'Updating «conda»:'
+  conda update conda
 end

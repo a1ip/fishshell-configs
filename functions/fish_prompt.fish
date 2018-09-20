@@ -1,1 +1,1 @@
-/Users/phil/.local/share/omf/themes/hulk/fish_prompt.fish
+/Users/phil/.local/share/omf/themes/will/fish_prompt.fish
