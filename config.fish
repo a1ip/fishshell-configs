@@ -1,13 +1,22 @@
-set -gx PATH ~/miniconda/bin /usr/local/opt/python/bin ./.cabal-sandbox/bin ~/Library/Haskell/bin /usr/local/bin /usr/local/sbin /usr/X11/bin /usr/bin /bin /usr/sbin /sbin /Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin ~/.bin ~/bin /usr/local/opt/grep/bin
+set -gx PATH /usr/local/opt/python/bin ./.cabal-sandbox/bin ~/Library/Haskell/bin /usr/local/bin /usr/local/sbin /usr/X11/bin /usr/bin /bin /usr/sbin /sbin /Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin ~/.bin ~/bin /usr/local/opt/grep/bin ~/miniconda/bin ~/.nvm/versions/node/v12.14.0/bin
 
 set -gx MANPATH /usr/share/man /usr/local/man /usr/local/Homebrew/manpages /usr/local/opt/grep/share/man /usr/local/opt/erlang/lib/erlang/man $MANPATH
+
+set -g fish_emoji_width 2
+
+set fish_user_paths (npm bin)
 
 set -g YX ~/yx
 set -g FC ~/.config/fish
 set -g DL ~/Downloads
 set -gx RU /usr/local/share/games/fortunes/ru
 
+#set -gx GEM_HOME $HOME/gems
+set -gx PATH $HOME/gems/bin $PATH
+
 set -gx BAT_THEME "Monokai Extended Light"
+
+set -gx BYOBU_PREFIX /usr/local
 
 setenv LANG "ru_RU.UTF-8"
 setenv LC_ALL "ru_RU.UTF-8"
@@ -74,4 +83,7 @@ set -gx PATH $PATH $GOPATH/bin
 
 source /usr/local/etc/grc.fish > /dev/null
 sh ~/miniconda/bin/activate > /dev/null
-test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fishset -g fish_user_paths "/usr/local/opt/curl/bin" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/sqlite/bin" $fish_user_paths
+
+set -gx NODE_PATH (npm root -g)
