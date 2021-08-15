@@ -1,4 +1,4 @@
-function cheat -d "Show cheat sheet"
+function cht -d "Show cheat sheet from https://cht.sh site"
   if test (count $argv) -eq 0
     curl cht.sh/\?style=perldoc
   else

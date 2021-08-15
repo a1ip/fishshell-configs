@@ -4,9 +4,11 @@ function up -d 'Upgrade brew and node packages'
   #brew cleanup
   #brew linkapps
   #brew cask upgrade
-  brew cu --yes --all --quiet
-  #brew cleanup
+  brew cu --yes --all --cleanup --quiet
+  mas upgrade
+  brew cleanup
   rm -rf (brew --cache)
+  brew bundle dump --force --describe --file=~/Brewfile
   #rvm get stable
   omf update
   npm install -g npm@latest
@@ -15,6 +17,6 @@ function up -d 'Upgrade brew and node packages'
   #meteor update
   #rvm use default
   #gem update -q
-  echo 'Updating «conda»:'
-  conda update conda
+  #echo 'Updating «conda»:'
+  #conda update conda
 end

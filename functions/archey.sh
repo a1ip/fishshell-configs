@@ -62,17 +62,37 @@ done
 user=$(whoami)
 hostname=$(hostname | sed 's/.local//g')
 
-#if [[ "${opt_offline}" = f ]]; then
-    #ipfile="${HOME}/.archey-ip"
-    #if [ -a "$ipfile" ] && test `find "$ipfile" -mmin -360`; then
-        #while read -r line; do
-            #ip="$line"
-        #done < "$ipfile"
-    #else
-        #ip=$(dig +short myip.opendns.com @resolver1.opendns.com)
-        #echo $ip > "$ipfile"
-    #fi
-#fi
+# v4 and v6 address detection
+if [[ "${opt_offline}" = f ]]; then
+    ipfile4="${HOME}/.archey-ipv4"
+    ipfile6="${HOME}/.archey-ipv6"
+    if [ -a "$ipfile4" ] && test `find "$ipfile4" -mmin -360`; then
+        while read -r line; do
+            V4="$line"
+        done < "$ipfile4"
+    else
+        if V4=$(curl -sS --max-time 5 https://4.ifcfg.me/ 2>/dev/null); then
+            echo $V4 > "$ipfile4"
+        fi
+    fi
+    if [ -a "$ipfile6" ] && test `find "$ipfile6" -mmin -360`; then
+        while read -r line; do
+            V6="$line"
+        done < "$ipfile6"
+    else
+        if V6=$(curl -sS --max-time 5 https://6.ifcfg.me/ 2>/dev/null); then
+            echo $V6 > "$ipfile6"
+        fi
+    fi
+fi
+
+if [[ "${opt_localip}" = t ]]; then
+	# Get the interface used for the default route
+	activeadapter=$(route -n get 0.0.0.0 | awk '/interface: / {print $2}')
+	# Now get the IP address assigned to that interface
+	localip=$(ifconfig ${activeadapter} | awk '/inet / {print $2}')
+fi
+
 
 distro="OS X $(sw_vers -productVersion)"
 kernel=$(uname)
@@ -141,6 +161,18 @@ fieldlist[${#fieldlist[@]}]="${textColor}Battery:${normal} ${battery}${normal}"
 
 fieldlist[${#fieldlist[@]}]="${textColor}Date:${normal} $(date)${normal}"
 
+if [ "${opt_offline}" = f ]; then
+    if [ ! -z "$V4" ]; then
+      fieldlist[${#fieldlist[@]}]="${textColor}IPv4:${normal} ${V4}${normal}"
+    fi
+    if [ ! -z "$V6" ]; then
+      fieldlist[${#fieldlist[@]}]="${textColor}IPv6:${normal} ${V6}${normal}"
+    fi
+fi
+if [ "${opt_localip}" = t ]; then
+	fieldlist[${#fieldlist[@]}]="${textColor}Local IP:${normal} ${localip}${normal}"
+fi
+
 logofile=${ARCHEY_LOGO_FILE:-"${HOME}/.config/archey-logo"}
 if [ -a "$logofile" ]
   then
@@ -179,6 +211,6 @@ else
 / / /   |       ${fieldlist[10]}
 \/  \   \_      ${fieldlist[11]}
 -------------   ${fieldlist[12]}
-${normal}
-"
+                ${fieldlist[13]}
+${normal}"
 fi

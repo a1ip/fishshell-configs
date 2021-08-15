@@ -1,8 +1,12 @@
-set -gx PATH /usr/local/opt/python/bin ./.cabal-sandbox/bin ~/Library/Haskell/bin /usr/local/bin /usr/local/sbin /usr/X11/bin /usr/bin /bin /usr/sbin /sbin /Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin ~/.bin ~/bin /usr/local/opt/grep/bin ~/miniconda/bin ~/.nvm/versions/node/v12.14.0/bin
+set -gx PATH /usr/local/opt/python/bin ./.cabal-sandbox/bin ~/Library/Haskell/bin /usr/local/bin /usr/local/sbin /usr/X11/bin /usr/bin /bin /usr/sbin /sbin /Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin ~/.bin ~/bin /usr/local/opt/grep/bin ~/.nvm/versions/node/v12.14.0/bin
+
+#~/miniconda/bin # from path
 
 set -gx MANPATH /usr/share/man /usr/local/man /usr/local/Homebrew/manpages /usr/local/opt/grep/share/man /usr/local/opt/erlang/lib/erlang/man $MANPATH
 
 set -g fish_emoji_width 2
+
+set -gx PYTHONHTTPSVERIFY 0
 
 set fish_user_paths (npm bin)
 
@@ -46,7 +50,7 @@ set -x RUBY_HEAP_SLOTS_GROWTH_FACTOR 1
 set -x RUBY_GC_MALLOC_LIMIT 1000000000
 set -x RUBY_HEAP_FREE_MIN 500000
 
-set -g PLANCHRONO https://gist.githubusercontent.com/a1ip/9979931/raw/9a0126e89bf1d7e7cce8f4904476e7e9fc986cd7/plan_chronological.txt;
+#set -g PLANCHRONO https://gist.githubusercontent.com/a1ip/9979931/raw/9a0126e89bf1d7e7cce8f4904476e7e9fc986cd7/plan_chronological.txt;
 #set -gx PLANCHRONO https://git.io/plan-chron
 
 #powerline-setup
@@ -68,7 +72,7 @@ set -g PLANCHRONO https://gist.githubusercontent.com/a1ip/9979931/raw/9a0126e89b
 #rvm gemset use octopress > /dev/null
 # rvm gemset use global > /dev/null
 
-ulimit -S -n 100000 > /dev/null
+#ulimit -S -n 100000 > /dev/null
 
 set -gx WINEARCH "win32"
 
@@ -77,13 +81,17 @@ set -gx WINEARCH "win32"
 #set -gx SAGE_ROOT "/opt/homebrew-cask/Caskroom/sage/6.9/Sage-6.9.app/Contents/Resources/sage"
 #set -gx SAGE64 "yes"
 
-set -gx GOROOT (go env GOROOT)
+#set -gx GOROOT (go env GOROOT)
 set -gx GOPATH ~/go
 set -gx PATH $PATH $GOPATH/bin
 
 source /usr/local/etc/grc.fish > /dev/null
-sh ~/miniconda/bin/activate > /dev/null
+#sh ~/miniconda/bin/activate > /dev/null
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fishset -g fish_user_paths "/usr/local/opt/curl/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/sqlite/bin" $fish_user_paths
 
 set -gx NODE_PATH (npm root -g)
+
+set -g RIPGREP_CONFIG_PATH ~/.config/ripgrep.conf
+
+cd $DL
